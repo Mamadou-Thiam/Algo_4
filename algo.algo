@@ -1,0 +1,33 @@
+ALGORITHM palindrome
+VAR
+    monde:STRING
+BEGIN
+    FUNCTION ispalindrome(mot:STRING) : BOOLEAN
+    VAR
+        i,j:INTEGER
+    BEGIN
+        IF (mot.length==0||mot.length==1) THEN
+            write("le mot est palindrome")
+        END_IF
+        i=0
+        j=mot.length -1
+        WHILE (mot[i]==mot[j] && i<=mot.length/2) DO
+            i++
+            j++
+        END_WHILE
+        RETURN true ;
+    END
+    write("donner un mot")
+    read(monde)
+    IF (ispalindrome(mot)===true) THEN
+    write("le mot" + mot + "est palindrome")
+    
+    ELSE
+          write("le mot" + mot + "n'est palindrome")
+    
+    END_IF
+END
+
+
+  
+     
